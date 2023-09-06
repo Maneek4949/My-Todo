@@ -1,0 +1,27 @@
+<%- include("header")  %>
+<h1 id="date"><%=day %></h1>
+<div class="all-todo">
+<form action="/" method="POST">
+<div class="input-group mb-3">
+    <input type="text" class="form-control" name="todo" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <button class="btn btn-primary" type="submit" name="list" value="<%= day%>" >New Todo</button>
+  </div>
+</form>
+
+<div class="todobox">
+<% if(locals.todos){ %>
+  <% todos.forEach(todo =>{ %>
+    <div class="s-todo">
+      <form action="/delete" method="POST">
+      <input type="checkbox" class="strikethrough" name="checkbox" onChange="this.form.submit()" value="<%=todo._id%>"/>
+      <input type="hidden" name="lname" value="<%=day%>"/></form>
+      <label class="todo" for="packers" class="strikethrough"><%= todo.name %></label>
+  </div>
+
+ <% }) %>
+  
+<% } else{%>
+  <% console.log("noting")} %>
+</div>
+</div>
+<%- include("footer")  %>

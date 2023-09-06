@@ -1,0 +1,43 @@
+
+#date{
+  text-align: center;
+  margin-top: 110px;
+}
+body{
+  background-image: url("bg.jpg");
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc;
+}
+*{
+  font-family: 'Dancing Script', cursive;
+  font-family: 'Rubik', sans-serif;
+  
+}
+.all-todo{
+  display: grid;
+  justify-content: center;
+  margin: 5px;
+}
+
+
+.s-todo {
+font-size: 20px;
+margin: 0px 0px 10px;
+display: flex;
+}
+
+label.todo {
+  margin-left: 20px;
+}
+.btn .btn-primary {
+  background-color: wheat;
+  border: none;
+  color: black;
+}
+
+.todobox {
+  /* border: solid; */
+  background: #ffffffbf;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
